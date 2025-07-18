@@ -124,6 +124,23 @@
       position: relative;
       top: -2px;
     }
+
+    .copy-button {
+      padding: 1px 8px;
+      margin-left: 10px;
+      font-size: 0.85em;
+      color: #666;
+      background-color: #f3f3f3;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: Garamond, serif;
+      transition: background-color 0.3s;
+    }
+    
+    .copy-button:hover {
+      background-color: #e6e6e6;
+    }
     
   </style>
 </head>
@@ -148,12 +165,13 @@
           </div>
         
           <div>
-            <!-- Email Icon (classic envelope) -->
             <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="5" width="18" height="14" rx="2" ry="2"/>
               <polyline points="3 7,12 13,21 7"/>
             </svg>
-            <a href="mailto:s.y.ernst@lse.ac.uk">s.y.ernst@lse.ac.uk</a>
+            <a id="email-address" href="mailto:s.y.ernst@lse.ac.uk">s.y.ernst@lse.ac.uk</a>
+          
+            <button class="button-style copy-button" onclick="copyEmail()" title="Copy email to clipboard">Copy</button>
           </div>
         </div>
 
@@ -204,6 +222,14 @@
         abstractDiv.style.display = "none";
         button.textContent = "Abstract";
       }
+    }
+    function copyEmail() {
+      const email = document.getElementById("email-address").textContent.trim();
+      navigator.clipboard.writeText(email).then(() => {
+        alert("Email copied to clipboard!");
+      }).catch(err => {
+        console.error("Failed to copy email:", err);
+      });
     }
   </script>
 </body>
