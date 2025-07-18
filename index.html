@@ -124,23 +124,6 @@
       position: relative;
       top: -2px;
     }
-
-    .copy-button {
-      padding: 1px 8px;
-      margin-left: 10px;
-      font-size: 0.85em;
-      color: #666;
-      background-color: #f3f3f3;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      cursor: pointer;
-      font-family: Garamond, serif;
-      transition: background-color 0.3s;
-    }
-    
-    .copy-button:hover {
-      background-color: #e6e6e6;
-    }
     
   </style>
 </head>
@@ -170,14 +153,6 @@
               <polyline points="3 7,12 13,21 7"/>
             </svg>
             <a id="email-address" href="mailto:s.y.ernst@lse.ac.uk">s.y.ernst@lse.ac.uk</a>
-          
-            <button class="copy-button" onclick="copyEmail()" title="Copy email to clipboard">
-              <svg class="icon-copy" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-              </svg>
-            </button>
-
           </div>
         </div>
 
@@ -228,10 +203,6 @@
         abstractDiv.style.display = "none";
         button.textContent = "Abstract";
       }
-    }
-    function copyEmail() {
-      const email = document.getElementById("email-address").textContent.trim();
-      navigator.clipboard.writeText(email);
     }
   </script>
 </body>
