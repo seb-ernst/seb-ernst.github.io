@@ -137,6 +137,52 @@
       position: relative;
       top: -2px;
     }
+
+    .intro-section {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 1rem; /* slightly smaller base font */
+        padding: 15px;
+      }
+    
+      h1 {
+        font-size: 1.8em;
+      }
+    
+      img {
+        width: 100%;
+        height: auto;
+        margin: 0 0 10px 0;
+      }
+    
+      .content-section > div {
+        flex-direction: column;
+      }
+    
+      .button-group {
+        margin-left: 0;
+        justify-content: flex-start;
+      }
+    
+      .info-links {
+        font-size: 0.95em;
+      }
+    
+      .button-style {
+        font-size: 1rem;
+        padding: 4px 10px;
+      }
+
+      .intro-section {
+        flex-direction: column;
+      }
+      
+    }
     
   </style>
 </head>
@@ -145,7 +191,7 @@
   <h1>Sebastian Ernst</h1>
 
   <div class="content-section">
-    <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+    <div class="intro-section">
       <img src="images/photo1.jpg" alt="Sebastian Ernst" style="width: 220px; height: auto; border-radius: 8px; margin-right: 20px;">
       <div>
         <p>I am an Economics PhD candidate at the London School of Economics. My research interests are in public economics, labour economics and industrial organisation.</p>
