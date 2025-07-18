@@ -12,48 +12,65 @@
       padding: 20px;
       line-height: 1.6;
     }
+
     h1, h2 {
       color: #333;
       margin: 0;
     }
+
     .email {
       font-size: 0.95em;
       color: #555;
       margin-bottom: 20px;
     }
+
     nav a {
       margin-right: 15px;
       text-decoration: none;
       color: #0056b3;
     }
+
     hr {
       margin: 30px 0;
     }
 
-    /* New section styling below CV */
     .content-section {
       font-family: Garamond, serif;
     }
+
     .coauthors {
       color: #666;
       font-style: normal;
     }
+
+    .button-style {
+      background-color: #eee;
+      border: 1px solid #ccc;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-family: Garamond, serif;
+      font-size: 0.95em;
+      text-decoration: none;
+      color: #555;
+      line-height: 1.4;
+      display: inline-block;
+    }
+
+    .button-group {
+      margin: 10px 0 20px 40px;
+      color: #555;
+      font-size: 0.95em;
+      font-family: Garamond, serif;
+    }
+
+    #abstract-text {
+      display: none;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
   </style>
 </head>
 
-<script>
-  function toggleAbstract(button) {
-    const abstractDiv = button.nextElementSibling.nextElementSibling;
-    if (abstractDiv.style.display === "none") {
-      abstractDiv.style.display = "block";
-      button.textContent = "Hide Abstract";
-    } else {
-      abstractDiv.style.display = "none";
-      button.textContent = "Abstract";
-    }
-  }
-</script>
-  
 <body>
   <h1>Sebastian Ernst</h1>
   <div class="email">s.y.ernst@lse.ac.uk</div>
@@ -64,16 +81,14 @@
 
   <hr>
 
-  <!-- Begin Garamond-styled content -->
   <div class="content-section">
-
     <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
       <img src="images/photo1.jpg" alt="Sebastian Ernst" style="width: 200px; height: auto; border-radius: 8px; margin-right: 20px;">
       <p>I am an Economics PhD candidate at the London School of Economics. My research interests are in public economics, labour economics and industrial organisation.</p>
     </div>
 
     <h2>Publications</h2>
-    
+
     <p>
       <a href="papers/2024_EMS_Risk.pdf" target="_blank">Risk Scores for Long-Term Unemployment and the Assignment to Job Search Counseling</a>
       <span class="coauthors">
@@ -85,39 +100,33 @@
       <em>AEA Papers and Proceedings</em>, May 2024
     </p>
 
-      <div style="margin: 10px 0 20px 40px; color: #555; font-size: 0.95em; font-family: Garamond, serif;">
-        <button onclick="toggleAbstract()" 
-          style="
-            background-color: #eee; 
-            border: 1px solid #ccc; 
-            padding: 5px 10px; 
-            cursor: pointer; 
-            margin-right: 10px; 
-            font-family: Garamond, serif; 
-            font-size: 0.95em;
-            text-decoration: none;
-            color: #555;
-            line-height: 1.4;
-            display: inline-block;
-        ">
-          Abstract
-        </button>
-      
-        <a href="https://example.com/replication-package" target="_blank" style="background-color: #eee; border: 1px solid #ccc; padding: 5px 10px; text-decoration: none; color: #555; font-family: Garamond, serif;">
-          Replication Package
-        </a>
-      
-        <div id="abstract-text" style="display: none; margin-top: 10px; margin-left: 10px;">
-          This paper studies how risk scores can be used to better allocate job seekers to counseling programs, improving long-term employment outcomes. Using administrative data, we evaluate assignment mechanisms and simulate counterfactuals under alternative targeting rules.
-        </div>
+    <div class="button-group">
+      <button class="button-style" onclick="toggleAbstract(this)">Abstract</button>
+
+      <a href="https://example.com/replication-package" target="_blank" class="button-style">
+        Replication Package
+      </a>
+
+      <div id="abstract-text">
+        This paper studies how risk scores can be used to better allocate job seekers to counseling programs, improving long-term employment outcomes. Using administrative data, we evaluate assignment mechanisms and simulate counterfactuals under alternative targeting rules.
       </div>
-    
+    </div>
+
     <h2>Works in Progress</h2>
     <p>"..."</p>
-    
-
   </div>
-  <!-- End Garamond-styled content -->
 
+  <script>
+    function toggleAbstract(button) {
+      const abstractDiv = document.getElementById("abstract-text");
+      if (abstractDiv.style.display === "none" || abstractDiv.style.display === "") {
+        abstractDiv.style.display = "block";
+        button.textContent = "Hide Abstract";
+      } else {
+        abstractDiv.style.display = "none";
+        button.textContent = "Abstract";
+      }
+    }
+  </script>
 </body>
 </html>
