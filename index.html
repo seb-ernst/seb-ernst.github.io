@@ -29,6 +29,18 @@
     hr {
       margin: 30px 0;
     }
+
+    /* New section styling below CV */
+    .content-section {
+      font-family: Garamond, serif;
+    }
+    .publication-title {
+      font-weight: bold;
+    }
+    .coauthors {
+      color: #666;
+      font-style: normal;
+    }
   </style>
 </head>
 <body>
@@ -41,18 +53,26 @@
 
   <hr>
 
-  <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
-    <img src="photo1.jpg" alt="Sebastian Ernst" style="width: 200px; height: auto; border-radius: 8px; margin-right: 20px;">
-    <p>I am an Economics PhD candidate at the London School of Economics. My research interests are in public economics, labour economics and industrial organisation.</p>
+  <!-- Begin Garamond-styled content -->
+  <div class="content-section">
+
+    <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+      <img src="photo1.jpg" alt="Sebastian Ernst" style="width: 200px; height: auto; border-radius: 8px; margin-right: 20px;">
+      <p>I am an Economics PhD candidate at the London School of Economics. My research interests are in public economics, labour economics and industrial organisation.</p>
+    </div>
+
+    <h2>Publications</h2>
+    <p>
+      <span class="publication-title">Risk Scores for Long-Term Unemployment and the Assignment to Job Search Counseling</span>
+      <span class="coauthors"> with Andreas I. Mueller and Johannes Spinnewijn</span>
+    </p>
+    <p>AEA Papers and Proceedings, May 2024</p>
+    
+    <h2>Works in Progress</h2>
+    <p>"..."</p>
+
   </div>
-
-  <h2>Publications</h2>
-  <p>Ernst, S. (2024). "The Efficiency of Public Subsidies in Labor Markets." <em>Journal of Public Economics</em>.</p>
-  <p>Ernst, S. and Smith, J. (2023). "Firm Heterogeneity and Market Design." <em>Economica</em>.</p>
-
-  <h2>Works in Progress</h2>
-  <p>"Tax Incentives and Firm Dynamics in the UK Manufacturing Sector"</p>
-  <p>"Minimum Wage Policy and Informal Labor in Eastern Europe"</p>
+  <!-- End Garamond-styled content -->
 
 </body>
 </html>
