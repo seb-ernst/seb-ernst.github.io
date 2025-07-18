@@ -44,16 +44,25 @@
     }
 
     .button-style {
-      background-color: #eee;
-      border: 1px solid #ccc;
-      padding: 5px 10px;
-      cursor: pointer;
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(100, 100, 100, 0.3);
+      backdrop-filter: blur(4px);
+      border-radius: 6px;
+      padding: 7px 14px;
       font-family: Garamond, serif;
       font-size: 0.95em;
+      color: #444;
+      cursor: pointer;
       text-decoration: none;
-      color: #555;
-      line-height: 1.4;
       display: inline-block;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+    .button-style:hover {
+      background: rgba(240, 240, 240, 0.9);
+      color: #000;
+      border-color: rgba(100, 100, 100, 0.4);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     }
 
     .button-group {
