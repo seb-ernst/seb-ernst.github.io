@@ -40,12 +40,26 @@
     }
   </style>
 </head>
+
+<script>
+  function toggleAbstract(button) {
+    const abstractDiv = button.nextElementSibling.nextElementSibling;
+    if (abstractDiv.style.display === "none") {
+      abstractDiv.style.display = "block";
+      button.textContent = "Hide Abstract";
+    } else {
+      abstractDiv.style.display = "none";
+      button.textContent = "Abstract";
+    }
+  }
+</script>
+  
 <body>
   <h1>Sebastian Ernst</h1>
   <div class="email">s.y.ernst@lse.ac.uk</div>
 
   <nav>
-    <a href="#cv">CV</a>
+    <a href="cv.pdf" target="_blank">CV</a>
   </nav>
 
   <hr>
