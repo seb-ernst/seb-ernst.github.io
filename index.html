@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sebastian Ernst</title>
+
+  <!-- Font for name -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,7 +17,14 @@
       line-height: 1.6;
     }
 
-    h1, h2 {
+    h1 {
+      color: #333;
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4em;
+    }
+
+    h2 {
       color: #333;
       margin: 0;
     }
@@ -22,7 +33,7 @@
       color: rgb(50, 135, 184);
       text-decoration: none;
     }
-    
+
     a:hover {
       text-decoration: underline;
     }
@@ -30,12 +41,6 @@
     .email {
       font-size: 0.95em;
       color: #555;
-      margin-bottom: 20px;
-    }
-
-    nav a {
-      margin-right: 15px;
-      text-decoration: none;
     }
 
     hr {
@@ -66,7 +71,7 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
       transition: all 0.3s ease;
     }
-    
+
     .button-style:hover {
       background: rgba(240, 240, 240, 0.9);
       color: #000;
@@ -87,23 +92,42 @@
       margin-top: 10px;
       margin-left: 10px;
     }
+
+    .info-links {
+      margin-top: 15px;
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    .info-links a {
+      margin-right: 20px;
+    }
+
+    .info-icon {
+      margin-right: 6px;
+    }
   </style>
 </head>
 
 <body>
   <h1>Sebastian Ernst</h1>
-  <div class="email">s.y.ernst@lse.ac.uk</div>
-
-  <nav>
-    <a href="CV/SebastianErnst_CV_202507.pdf" target="_blank">CV</a>
-  </nav>
-
-  <hr>
 
   <div class="content-section">
     <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
       <img src="images/photo1.jpg" alt="Sebastian Ernst" style="width: 220px; height: auto; border-radius: 8px; margin-right: 20px;">
-      <p>I am an Economics PhD candidate at the London School of Economics. My research interests are in public economics, labour economics and industrial organisation.</p>
+      <div>
+        <p>I am an Economics PhD candidate at the London School of Economics. My research interests are in public economics, labour economics and industrial organisation.</p>
+
+        <div class="info-links">
+          <a href="CV/SebastianErnst_CV_202507.pdf" target="_blank">
+            <span class="info-icon">📄</span>CV
+          </a>
+
+          <a href="mailto:s.y.ernst@lse.ac.uk">
+            <span class="info-icon">📧</span>s.y.ernst@lse.ac.uk
+          </a>
+        </div>
+      </div>
     </div>
 
     <h2>Publications</h2>
@@ -134,9 +158,10 @@
     <h2>Works in Progress</h2>
     <p>"Targeted Subsidy Design: Theory and Evidence from Childcare Subsidies"</p>
     <p>"Risk or Responsiveness? Targeting in Unemployment Policy"
-        with 
-        <a href="https://sites.google.com/view/andreasimueller/" target="_blank">Andreas I. Mueller</a>, 
-        <a href="https://personal.lse.ac.uk/spinnewi/" target="_blank">Johannes Spinnewijn</a>, Joost Bollens and Stijn Van De Velde</p>
+      with 
+      <a href="https://sites.google.com/view/andreasimueller/" target="_blank">Andreas I. Mueller</a>, 
+      <a href="https://personal.lse.ac.uk/spinnewi/" target="_blank">Johannes Spinnewijn</a>, Joost Bollens and Stijn Van De Velde
+    </p>
   </div>
 
   <script>
