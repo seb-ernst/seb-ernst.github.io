@@ -171,7 +171,13 @@
             </svg>
             <a id="email-address" href="mailto:s.y.ernst@lse.ac.uk">s.y.ernst@lse.ac.uk</a>
           
-            <button class="button-style copy-button" onclick="copyEmail()" title="Copy email to clipboard">Copy</button>
+            <button class="copy-button" onclick="copyEmail()" title="Copy email to clipboard">
+              <svg class="icon-copy" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+
           </div>
         </div>
 
@@ -225,11 +231,7 @@
     }
     function copyEmail() {
       const email = document.getElementById("email-address").textContent.trim();
-      navigator.clipboard.writeText(email).then(() => {
-        alert("Email copied to clipboard!");
-      }).catch(err => {
-        console.error("Failed to copy email:", err);
-      });
+      navigator.clipboard.writeText(email);
     }
   </script>
 </body>
