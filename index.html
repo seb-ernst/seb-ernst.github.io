@@ -273,6 +273,25 @@
       }
       
     }
+
+    .button-style {
+      font-size: 0.78rem;
+      line-height: 1.3;
+      padding: 1px 6px;
+      border-radius: 5px;
+    }
+    
+    .button-group {
+      margin-top: 2px;
+      margin-bottom: 6px;
+      gap: 6px;
+      align-items: flex-start;
+    }
+    
+    /* Reduce the space between paper titles and buttons */
+    .content-section p:has(+ .button-group) {
+      margin-bottom: 3px;
+    }
     
   </style>
 </head>
