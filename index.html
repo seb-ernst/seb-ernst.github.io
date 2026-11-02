@@ -177,9 +177,30 @@
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      margin: 2px 0 10px 40px;
+      margin: 2px 0 12px 40px;
       font-family: 'Inter', sans-serif;
       align-items: flex-start;
+    }
+
+    .coverage-links {
+      flex-basis: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 4px 8px;
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+    
+    .coverage-links > span {
+      color: #888;
+    }
+    
+    .coverage-links a + a::before {
+      content: "·";
+      color: #aaa;
+      display: inline-block;
+      margin-right: 8px;
     }
 
     .abstract-text {
@@ -334,7 +355,18 @@
     
     <div class="button-group">
       <button class="button-style" onclick="toggleAbstract(this)">Abstract</button>
-    
+      <a href="https://cepr.org/voxeu/columns/risk-or-responsive-rethinking-unemployment-policy"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="button-style no-underline">
+        VoxEU ↗
+      </a>
+      <div class="coverage-links">
+        <span>Coverage:</span>
+        <a href="https://www.standaard.be/economie/klassieke-begeleiding-werkt-niet-bij-langdurig-werklozen-blijkt-uit-studie-aanpak-kan-drie-keer-efficienter/163151196.html"
+           target="_blank"
+           rel="noopener noreferrer">De Standaard</a>
+      </div>
       <div class="abstract-text">
         This paper evaluates the use of algorithmic risk profiling to direct job search support toward individuals most at risk of long-term unemployment. Using three regression discontinuity designs and rich administrative data from the Flemish Public Employment Service (VDAB) in Belgium, we address two key dimensions: whom and when to target. First, job search counseling raises employment on average, but treatment effects decline sharply with predicted risk. This reveals a fundamental trade-off between targeting those most at risk and those most responsive to intervention. Second, we find no evidence that treatment effects depreciate at the individual level, but strong dynamic selection: as spells lengthen, surviving job seekers have both higher baseline risk and lower treatment responsiveness, with opposing implications for the returns to treatment. We develop and calibrate a conceptual framework for optimal targeting that highlights the key role of the ratio of predicted treatment effects to predicted job-finding probabilities. Targeting rules combining both objects substantially outperform the status quo, yielding welfare gains nearly three times as large as those from random assignment, while targeting on risk scores alone performs worse than random assignment.      
       </div>
