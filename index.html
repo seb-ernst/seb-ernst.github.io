@@ -7,7 +7,7 @@
 
   <!-- Fonts: Inter for body text, Space Grotesk for headings -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  
+
   <style>
     html {
       overflow-y: scroll;
@@ -59,7 +59,7 @@
 
     .no-underline:hover {
       text-decoration: none;
-    }    
+    }
 
     .email {
       font-size: 0.95em;
@@ -107,8 +107,8 @@
       height: auto;
       margin-top: 12px;
       margin-right: 32px;
-    }   
-    
+    }
+
     .coauthors {
       color: #6a6a6a;
       font-style: normal;
@@ -117,7 +117,7 @@
     .coauthors a {
       color: #6a6a6a;
       font-style: normal;
-    }    
+    }
 
     .button-style {
       background: rgba(255, 255, 255, 0.6);
@@ -128,14 +128,14 @@
       font-family: 'Inter', sans-serif;
       font-size: 0.78rem;
       line-height: 1.3;
-      color: #888; /* 🔧 Softer grey text */
+      color: #888; /* Softer grey text */
       cursor: pointer;
       text-decoration: none;
       display: inline-block;
       box-shadow: 0 1px 2px rgba(0,0,0,0.03);
       transition: all 0.3s ease;
     }
-    
+
     .button-style:hover {
       background: rgba(240, 240, 240, 0.9);
       color: #000;
@@ -191,11 +191,11 @@
       font-size: 0.8rem;
       line-height: 1.5;
     }
-    
+
     .coverage-links > span {
       color: #888;
     }
-    
+
     .coverage-links a + a::before {
       content: "·";
       color: #aaa;
@@ -224,21 +224,21 @@
       align-items: center;
       gap: 20px;
     }
-    
+
     .info-links a {
       margin-right: 0;
     }
-    
+
     .info-links div {
       margin-bottom: 0;
     }
-    
+
     .icon {
       vertical-align: middle;
       margin-right: 5px;
       top: -1px;
     }
-    
+
     .icon-cv {
       vertical-align: middle;
       margin-right: 5px;
@@ -265,25 +265,25 @@
 
     @media (max-width: 499px) {
       body {
-        font-size: 1rem; /* slightly smaller base font */
+        font-size: 1rem;
         padding: 15px;
       }
-    
+
       h1 {
         text-align: center;
       }
-    
+
       .intro-section img {
         width: 75vw;
         margin-right: 0;
         margin-bottom: 10px;
       }
-    
+
       .button-group {
         margin-left: 0;
         justify-content: flex-start;
       }
-    
+
       .info-links {
         font-size: 0.95em;
       }
@@ -293,7 +293,7 @@
         align-items: center;
         text-align: center;
       }
-      
+
       .intro-section > div {
         text-align: justify;
         width: 100%;
@@ -302,10 +302,10 @@
       .intro-text {
         margin-top: 0;
       }
-      
     }
-    
   </style>
+
+  <!-- Umami Analytics -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="9f8e9947-b0ee-4e9b-8bd5-ecab1d0f866d"></script>
 </head>
 
@@ -313,6 +313,7 @@
   <div class="content-section">
     <div class="intro-section">
       <img src="images/photo1.jpg" alt="Sebastian Ernst" class="profile-photo" style="border-radius: 12px;">
+
       <div class="intro-text">
         <h1>Sebastian Ernst</h1>
         <p>I am a PhD candidate in Economics at the London School of Economics. My research spans public economics, industrial organization, and labor economics, with a focus on the design and targeting of public programs.</p>
@@ -325,56 +326,74 @@
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
               <polyline points="14 2 14 8 20 8"/>
             </svg>
-            <a href="CV/cv_sebastian_ernst.pdf" target="_blank">CV</a>
+            <a href="CV/cv_sebastian_ernst.pdf"
+               target="_blank"
+               data-umami-event="CV click">CV</a>
           </div>
-        
+
           <div>
             <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="5" width="18" height="14" rx="2" ry="2"/>
               <polyline points="3 7,12 13,21 7"/>
             </svg>
-            <a id="email-address" href="mailto:s.y.ernst@lse.ac.uk">s.y.ernst@lse.ac.uk</a>
+            <a id="email-address"
+               href="mailto:s.y.ernst@lse.ac.uk"
+               data-umami-event="Email click">s.y.ernst@lse.ac.uk</a>
           </div>
         </div>
-
       </div>
     </div>
-    
+
     <h2>Working Papers</h2>
+
     <p>
-      <a href="papers/ernst_jmp.pdf" target="_blank" class="paper-link">Caring What It Costs: Subsidy Design in Child Care</a>
+      <a href="papers/ernst_jmp.pdf"
+         target="_blank"
+         class="paper-link"
+         data-umami-event="JMP click">Caring What It Costs: Subsidy Design in Child Care</a>
       <span class="jmp-tag" style="margin-left: 4px;">Job Market Paper</span>
     </p>
+
     <div class="button-group">
       <button class="button-style" onclick="toggleAbstract(this)">Abstract</button>
       <div class="abstract-text">
         Child care subsidies can generate large positive externalities through human capital development. An important and understudied feature of their design is the extent to which recipients are shielded from price differences. Shielding families from price can encourage the consumption of higher-quality care, generating social gains. However, if firms have market power, it can also lead to higher prices in equilibrium. Using administrative data and quasi-experimental variation from the United States, I show that reducing recipients' sensitivity to price shifts them toward higher-quality care but raises equilibrium prices. To evaluate policy alternatives, I estimate a structural model of child care demand and supply. I compare a benchmark policy based on federal guidelines that substantially reduces recipients' exposure to price to a budget-neutral alternative that preserves it. The benchmark policy shifts more subsidized children into high-quality care, but reduces the overall use of care and the consumer surplus of both subsidized and unsubsidized families. Finally, when quality is observable, quality-dependent subsidies are more efficient than price-dependent subsidies across a wide range of policy specifications.
       </div>
     </div>
-    <p><a href="papers/EMSB_Targeting.pdf" target="_blank" class="paper-link">At-Risk or Responsive? Targeting in Unemployment Policy</a>
+
+    <p>
+      <a href="papers/EMSB_Targeting.pdf"
+         target="_blank"
+         class="paper-link"
+         data-umami-event="At-Risk or Responsive paper click">At-Risk or Responsive? Targeting in Unemployment Policy</a>
       <span class="coauthors">
-        with 
-        <a href="https://sites.google.com/view/andreasimueller/" target="_blank">Andreas I. Mueller</a>,
-        <a href="https://personal.lse.ac.uk/spinnewi/" target="_blank">Johannes Spinnewijn</a> and Joost Bollens
+        with
+        <a href="https://sites.google.com/view/andreasimueller/"
+           target="_blank"
+           data-umami-event="Andreas Mueller website click">Andreas I. Mueller</a>,
+        <a href="https://personal.lse.ac.uk/spinnewi/"
+           target="_blank"
+           data-umami-event="Johannes Spinnewijn website click">Johannes Spinnewijn</a> and Joost Bollens
       </span>
     </p>
-    
+
     <div class="button-group">
       <button class="button-style" onclick="toggleAbstract(this)">Abstract</button>
-      <a href="https://cepr.org/voxeu/columns/risk-or-responsive-rethinking-unemployment-policy"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="button-style no-underline">
-        VoxEU ↗
-      </a>
+
       <div class="coverage-links">
         <span>Coverage:</span>
         <a href="https://www.standaard.be/economie/klassieke-begeleiding-werkt-niet-bij-langdurig-werklozen-blijkt-uit-studie-aanpak-kan-drie-keer-efficienter/163151196.html"
            target="_blank"
-           rel="noopener noreferrer">De Standaard</a>
+           rel="noopener noreferrer"
+           data-umami-event="De Standaard click">De Standaard</a>
+        <a href="https://cepr.org/voxeu/columns/risk-or-responsive-rethinking-unemployment-policy"
+           target="_blank"
+           rel="noopener noreferrer"
+           data-umami-event="VoxEU click">VoxEU</a>
       </div>
+
       <div class="abstract-text">
-        This paper evaluates the use of algorithmic risk profiling to direct job search support toward individuals most at risk of long-term unemployment. Using three regression discontinuity designs and rich administrative data from the Flemish Public Employment Service (VDAB) in Belgium, we address two key dimensions: whom and when to target. First, job search counseling raises employment on average, but treatment effects decline sharply with predicted risk. This reveals a fundamental trade-off between targeting those most at risk and those most responsive to intervention. Second, we find no evidence that treatment effects depreciate at the individual level, but strong dynamic selection: as spells lengthen, surviving job seekers have both higher baseline risk and lower treatment responsiveness, with opposing implications for the returns to treatment. We develop and calibrate a conceptual framework for optimal targeting that highlights the key role of the ratio of predicted treatment effects to predicted job-finding probabilities. Targeting rules combining both objects substantially outperform the status quo, yielding welfare gains nearly three times as large as those from random assignment, while targeting on risk scores alone performs worse than random assignment.      
+        This paper evaluates the use of algorithmic risk profiling to direct job search support toward individuals most at risk of long-term unemployment. Using three regression discontinuity designs and rich administrative data from the Flemish Public Employment Service (VDAB) in Belgium, we address two key dimensions: whom and when to target. First, job search counseling raises employment on average, but treatment effects decline sharply with predicted risk. This reveals a fundamental trade-off between targeting those most at risk and those most responsive to intervention. Second, we find no evidence that treatment effects depreciate at the individual level, but strong dynamic selection: as spells lengthen, surviving job seekers have both higher baseline risk and lower treatment responsiveness, with opposing implications for the returns to treatment. We develop and calibrate a conceptual framework for optimal targeting that highlights the key role of the ratio of predicted treatment effects to predicted job-finding probabilities. Targeting rules combining both objects substantially outperform the status quo, yielding welfare gains nearly three times as large as those from random assignment, while targeting on risk scores alone performs worse than random assignment.
       </div>
     </div>
 
@@ -384,36 +403,43 @@
       <span class="paper-title">Hiring Subsidies for Older Job Seekers: Evidence from Belgium</span>
       <span class="coauthors">with Joost Bollens</span>
     </p>
-    
+
     <div class="button-group">
       <button class="button-style" onclick="toggleAbstract(this)">Abstract</button>
-    
+
       <div class="abstract-text">
         Older job seekers face a heightened risk of long-term unemployment. Can targeted hiring subsidies improve their employment prospects? We study a Belgian subsidy that reduces employer social security contributions for hiring unemployed workers aged 55 or older. Using administrative data on all unemployment spells in Flanders, Belgium and a regression discontinuity design at the eligibility threshold, we find that the subsidy increases the probability of employment after three months by approximately 5 percentage points, with no detectable indirect effects on ineligible job seekers. These findings suggest that targeted hiring subsidies can improve older workers’ reemployment prospects without large adverse effects on the unsubsidized population.
       </div>
     </div>
-    
+
     <p>
       <span class="paper-title">The Effects of Housing Subsidies on Rental Prices</span>
     </p>
-    
+
     <div class="button-group">
       <button class="button-style" onclick="toggleAbstract(this)">Abstract</button>
-    
+
       <div class="abstract-text">
-          Housing subsidies are an important tool for expanding access to an essential good, but may also raise rents for tenants who receive no assistance. Using rental listing data from New York City, I document bunching in the distribution of advertised rents. To interpret the evidence, I develop a theoretical model of pricing under imperfect competition in which landlords face capacity constraints. The model shows that targeted subsidies can have particularly adverse effects on unsubsidized tenants when those constraints bind. The findings highlight the importance of price spillovers when assessing the incidence of housing assistance and designing targeted subsidies.  
+        Housing subsidies are an important tool for expanding access to an essential good, but may also raise rents for tenants who receive no assistance. Using rental listing data from New York City, I document bunching in the distribution of advertised rents. To interpret the evidence, I develop a theoretical model of pricing under imperfect competition in which landlords face capacity constraints. The model shows that targeted subsidies can have particularly adverse effects on unsubsidized tenants when those constraints bind. The findings highlight the importance of price spillovers when assessing the incidence of housing assistance and designing targeted subsidies.
       </div>
     </div>
-    
+
     <h2>Publications</h2>
 
     <p>
-      <a href="papers/2024_EMS_RiskScores.pdf" target="_blank" class="paper-link">Risk Scores for Long-Term Unemployment and the Assignment to Job Search Counseling</a>
+      <a href="papers/2024_EMS_RiskScores.pdf"
+         target="_blank"
+         class="paper-link"
+         data-umami-event="Risk Scores paper click">Risk Scores for Long-Term Unemployment and the Assignment to Job Search Counseling</a>
       <span class="coauthors">
-        with 
-        <a href="https://sites.google.com/view/andreasimueller/" target="_blank">Andreas I. Mueller</a> 
-        and 
-        <a href="https://personal.lse.ac.uk/spinnewi/" target="_blank">Johannes Spinnewijn</a>,
+        with
+        <a href="https://sites.google.com/view/andreasimueller/"
+           target="_blank"
+           data-umami-event="Andreas Mueller website click">Andreas I. Mueller</a>
+        and
+        <a href="https://personal.lse.ac.uk/spinnewi/"
+           target="_blank"
+           data-umami-event="Johannes Spinnewijn website click">Johannes Spinnewijn</a>,
       </span>
       <em>AEA Papers and Proceedings</em>, 114: 572–76, May 2024
     </p>
@@ -421,16 +447,18 @@
     <div class="button-group">
       <button class="button-style" onclick="toggleAbstract(this)">Abstract</button>
 
-    <a href="https://www.openicpsr.org/openicpsr/project/198641/version/V1/view" 
-       target="_blank" 
-       class="button-style no-underline">
-      Replication Package
-      <svg class="icon-external" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-        <polyline points="15 3 21 3 21 9"></polyline>
-        <line x1="10" y1="14" x2="21" y2="3"></line>
-      </svg>
-    </a>
+      <a href="https://www.openicpsr.org/openicpsr/project/198641/version/V1/view"
+         target="_blank"
+         class="button-style no-underline"
+         data-umami-event="Replication package click">
+        Replication Package
+        <a href="https://www.openicpsr.org/openicpsr/project/198641/version/V1/view"
+           target="_blank"
+           class="button-style no-underline"
+           data-umami-event="Replication package click">
+          Replication Package ↗
+        </a>
+      </a>
 
       <div class="abstract-text">
         This paper analyses how risk profiling is used to assign unemployed job seekers to job search counseling in Flanders, Belgium. We compare algorithmic selection to self-selection and selection by job search counselors. We discuss practical challenges for the implementation of risk profiling and highlight avenues for further research. We find that algorithmic assignment is used for only a small fraction of the sample and that job search counselors appear to have valuable private information on job seekers' reemployment prospects beyond what is captured by the algorithmic risk score.
@@ -441,6 +469,7 @@
   <script>
     function toggleAbstract(button) {
       const abstractDiv = button.closest(".button-group").querySelector(".abstract-text");
+
       if (abstractDiv.style.display === "none" || abstractDiv.style.display === "") {
         abstractDiv.style.display = "block";
         button.textContent = "Hide abstract";
