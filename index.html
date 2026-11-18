@@ -196,15 +196,12 @@
       color: #888;
     }
 
-    .coverage-links a + a::before {
-      content: "·";
-      color: #aaa;
-      display: inline-block;
-      margin-right: 8px;
-    }
-
     .abstract-text {
       display: none;
+    }
+
+    .abstract-text,
+    .presentations-text {
       flex-basis: 100%;
       min-width: 0;
       box-sizing: border-box;
@@ -355,7 +352,7 @@
     </p>
 
     <div class="button-group">
-      <button class="button-style" onclick="toggleAbstract(this)">Abstract</button>
+      <button class="button-style" data-open-event="JMP abstract opened" onclick="toggleAbstract(this)">Abstract</button>
       <div class="abstract-text">
         Child care subsidies can generate large positive externalities by promoting human capital development. An important and understudied feature of their design is the extent to which recipients are shielded from price differences. Such shielding can generate social gains by encouraging the use of higher-quality care, but may also raise equilibrium prices when providers have market power. Using administrative data and quasi-experimental variation from the United States, I show that reducing recipients' exposure to price differences shifts them toward providers with higher prices and higher quality ratings. Then, in a novel application of bunching methods, I estimate that providers charge 15 percent more when subsidy recipients are fully shielded from price differences than when they are fully exposed to them. To evaluate policy alternatives, I estimate a structural model of child care demand and supply. I compare a benchmark policy based on federal guidelines, which substantially shields recipients from price differences, with an equally costly fixed subsidy that leaves them fully exposed to those differences. The benchmark policy shifts more subsidized children into high-quality care, but reduces both overall child care use and consumer surplus for subsidized and unsubsidized families. Finally, when quality is observable, I find that tying subsidies directly to quality is more efficient than tying subsidies to price across a wide range of policy specifications.  
       </div>
@@ -378,22 +375,27 @@
     </p>
 
     <div class="button-group">
-      <button class="button-style" onclick="toggleAbstract(this)">Abstract</button>
+      <button class="button-style" data-open-event="At-Risk abstract opened" onclick="toggleAbstract(this)">Abstract</button>
+
+      <button type="button" class="button-style" aria-expanded="false" aria-controls="risk-presentations" data-open-event="At-Risk presentations opened" onclick="togglePresentations(this)">Presentations</button>
 
       <div class="coverage-links">
         <span>Coverage:</span>
-        <a href="https://www.standaard.be/economie/klassieke-begeleiding-werkt-niet-bij-langdurig-werklozen-blijkt-uit-studie-aanpak-kan-drie-keer-efficienter/163151196.html"
+        <span><a href="https://www.standaard.be/economie/klassieke-begeleiding-werkt-niet-bij-langdurig-werklozen-blijkt-uit-studie-aanpak-kan-drie-keer-efficienter/163151196.html"
            target="_blank"
            rel="noopener noreferrer"
-           data-umami-event="De Standaard click">De Standaard</a>
-        <a href="https://cepr.org/voxeu/columns/risk-or-responsive-rethinking-unemployment-policy"
+           data-umami-event="De Standaard click">De Standaard</a>, <a href="https://cepr.org/voxeu/columns/risk-or-responsive-rethinking-unemployment-policy"
            target="_blank"
            rel="noopener noreferrer"
-           data-umami-event="VoxEU click">VoxEU</a>
+           data-umami-event="VoxEU click">VoxEU</a></span>
       </div>
 
       <div class="abstract-text">
         This paper evaluates the use of algorithmic risk profiling to direct job search support toward individuals most at risk of long-term unemployment. Using three regression discontinuity designs and rich administrative data from the Flemish Public Employment Service (VDAB) in Belgium, we address two key dimensions: whom and when to target. First, job search counseling raises employment on average, but treatment effects decline sharply with predicted risk. This reveals a fundamental trade-off between targeting those most at risk and those most responsive to intervention. Second, we find no evidence that treatment effects depreciate at the individual level, but strong dynamic selection: as spells lengthen, surviving job seekers have both higher baseline risk and lower treatment responsiveness, with opposing implications for the returns to treatment. We develop and calibrate a conceptual framework for optimal targeting that highlights the key role of the ratio of predicted treatment effects to predicted job-finding probabilities. Targeting rules combining both objects substantially outperform the status quo, yielding welfare gains nearly three times as large as those from random assignment, while targeting on risk scores alone performs worse than random assignment.
+      </div>
+
+      <div id="risk-presentations" class="presentations-text" hidden>
+        Central Planning Bureau of the Netherlands, Cornell University, Ghent University, IFAU in Uppsala, LMU Munich, the London School of Economics, the NBER Summer Institute joint Labor/Public Finance session, the Tinbergen Institute in Rotterdam, the University of Essex, the University of Zurich, the VDAB, the University of Copenhagen, and the Université libre de Bruxelles.
       </div>
     </div>
 
@@ -405,7 +407,7 @@
     </p>
 
     <div class="button-group">
-      <button class="button-style" onclick="toggleAbstract(this)">Abstract</button>
+      <button class="button-style" data-open-event="Hiring Subsidies abstract opened" onclick="toggleAbstract(this)">Abstract</button>
 
       <div class="abstract-text">
         Older job seekers face a heightened risk of long-term unemployment. Can targeted hiring subsidies improve their employment prospects? We study a Belgian subsidy that reduces employer social security contributions for hiring unemployed workers aged 55 or older. Using administrative data on all unemployment spells in Flanders, Belgium and a regression discontinuity design at the eligibility threshold, we find that the subsidy increases the probability of employment after three months by approximately 5 percentage points, with no detectable indirect effects on ineligible job seekers. These findings suggest that targeted hiring subsidies can improve older workers’ reemployment prospects without large adverse effects on the unsubsidized population.
@@ -417,7 +419,7 @@
     </p>
 
     <div class="button-group">
-      <button class="button-style" onclick="toggleAbstract(this)">Abstract</button>
+      <button class="button-style" data-open-event="Housing Subsidies abstract opened" onclick="toggleAbstract(this)">Abstract</button>
 
       <div class="abstract-text">
         Housing subsidies are an important tool for expanding access to an essential good, but may also raise rents for tenants who receive no assistance. Using rental listing data from New York City, I document bunching in the distribution of advertised rents. To interpret the evidence, I develop a theoretical model of pricing under imperfect competition in which landlords face capacity constraints. The model shows that targeted subsidies can have particularly adverse effects on unsubsidized tenants when those constraints bind. The findings highlight the importance of price spillovers when assessing the incidence of housing assistance and designing targeted subsidies.
@@ -445,7 +447,7 @@
     </p>
 
     <div class="button-group">
-      <button class="button-style" onclick="toggleAbstract(this)">Abstract</button>
+      <button class="button-style" data-open-event="Risk Scores abstract opened" onclick="toggleAbstract(this)">Abstract</button>
 
       <a href="https://www.openicpsr.org/openicpsr/project/198641/version/V1/view"
          target="_blank"
@@ -462,12 +464,22 @@
   </div>
 
   <script>
+    function togglePresentations(button) {
+      const panel = document.getElementById(button.getAttribute("aria-controls"));
+      panel.hidden = !panel.hidden;
+      button.setAttribute("aria-expanded", String(!panel.hidden));
+      if (!panel.hidden) {
+        window.umami?.track(button.dataset.openEvent);
+      }
+    }
+
     function toggleAbstract(button) {
       const abstractDiv = button.closest(".button-group").querySelector(".abstract-text");
 
       if (abstractDiv.style.display === "none" || abstractDiv.style.display === "") {
         abstractDiv.style.display = "block";
         button.textContent = "Hide abstract";
+        window.umami?.track(button.dataset.openEvent);
       } else {
         abstractDiv.style.display = "none";
         button.textContent = "Abstract";
@@ -475,8 +487,5 @@
     }
   </script>
 
-  <!-- Cloudflare Web Analytics -->
-  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1b0b4345252e465591a4ec3a54ae833a"}'></script>
-  <!-- End Cloudflare Web Analytics -->
 </body>
 </html>
